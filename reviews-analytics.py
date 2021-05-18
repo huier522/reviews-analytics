@@ -13,3 +13,9 @@ for review in data:
     sum_review += len(review)
 avg_review = sum_review / len(data)
 print(f'每筆留言平均長度：{avg_review}')
+
+words_list = []
+for words in data:
+    if len(words) < 100:
+        words_list.append(len(words))
+print(f'留言長度小於100的總共有{len(words_list)}筆。')
